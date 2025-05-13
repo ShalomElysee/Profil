@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  background-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar_logo img {
+  height: 45px;
+  cursor: pointer;
+}
+
+.navbar_profil img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff4d;
+  transition: transform 0.3s ease;
+}
+
+.navbar_profil img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,89 @@
+/* Sidebar.css */
+.sidebar {
+  width: 50px;
+  height: 70vh;
+  background-color: #60884D4D;
+  color: #333;
+  overflow: hidden;
+  transition: width 0.3s ease, border-radius 0.3s ease;
+  position: fixed;
+  top: 60%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour l'état ouvert et fermé */
+.sidebar.open {
+  width: 200px;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+/* Menu Styles */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sidebar-item {
+font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Texte masqué en mode fermé */
+.sidebar.closed .sidebar-text {
+  display: none;
+}
+
+.sidebar.closed .sidebar-icon {
+  display: none;
+}
+
+/* Texte visible en mode ouvert */
+.sidebar-text.show {
+  display: inline;
+}
+
+/* Bouton de bascule (toggle) */
+.sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  background: #60884d00;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgb(44, 52, 58, 0.20);
+}
