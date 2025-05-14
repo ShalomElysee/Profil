@@ -1,12 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0;
   background: #f5f5f5;
 }
+
 .content {
   padding: 30px;
 }
@@ -61,7 +62,7 @@ body {
 }
 
 .save-btn {
-  background: #535353;;
+  background: #535353;
   border: none;
   padding: 10px 30px;
   color: white;
@@ -72,11 +73,9 @@ body {
   align-self: center;
 }
 
-
-
 /* CARTES */
 .card {
-  background:#FEFBF6;
+  background: #FEFBF6;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   padding: 20px;
@@ -90,28 +89,24 @@ body {
   margin-top: 30px;
 }
 
-
-/* SECTION MOT DE PASSE (corrigée) */
-
+/* SECTION MOT DE PASSE */
 .card.facture-card {
   height: 134px;
-  padding: 10px 30px; /* Réduction du padding */
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
   justify-content: center;
+  text-align: center;
 }
 
-.card.facture-card h3, .card.password-card h3  {
+.card.facture-card h3,
+.card.password-card h3 {
   margin: 0 0 10px 0;
   font-size: 20px;
   text-align: center;
-
 }
 
-
-/* GROUPES DE CHAMPS */
+/* FORM */
 .form-group {
   margin-bottom: 15px;
 }
@@ -123,7 +118,6 @@ body {
   color: #333;
 }
 
-/* CHAMPS INPUT SPÉCIFIQUES À MOT DE PASSE */
 input[type="password"],
 input[type="text"],
 .password-input input,
@@ -134,13 +128,12 @@ input[type="text"],
   font-size: 16px;
   border-radius: 30px;
   border: 1px solid #000000;
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   box-sizing: border-box;
   background: #FEFBF6;
 }
 
-/* CHAMP AVEC ICÔNE ŒIL */
 .password-input {
   position: relative;
 }
@@ -153,7 +146,7 @@ input[type="text"],
   font-size: 20px;
 }
 
-/* BOUTONS (global) */
+/* BOUTONS */
 .blue-btn,
 .small-button,
 .save-btn {
@@ -165,19 +158,26 @@ input[type="text"],
   font-size: 16px;
   cursor: pointer;
   width: 70%;
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   display: block;
-  margin: 20px auto 0 auto; /* centré horizontalement */
+  margin: 20px auto 0 auto;
 }
 
+/* FOOTER */
 .footer {
   background-color: #222;
   color: white;
-  padding: 10px 40px; 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
+}
+
+.footer > div {
+  flex: 1 1 250px;
+  min-width: 200px;
 }
 
 .footer h2,
@@ -213,13 +213,12 @@ input[type="text"],
 }
 
 .footer-bottom {
-  grid-column: 1 / -1;
+  width: 100%;
   text-align: center;
   font-size: 12px;
   color: #888;
-  margin-top: 10px; /* réduit aussi */
+  margin-top: 10px;
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 1023px) {
@@ -248,17 +247,25 @@ input[type="text"],
   .blue-btn,
   .small-button,
   .save-btn {
-    border-radius: 70px;
     font-size: 13px;
     padding: 10px;
-    Top:20px;
-    Right:26px;
-    Bottom:20px;
-    Left: 26px;
-    background: #535353;
   }
 
   .card {
     padding: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer > div {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    margin-top: 15px;
   }
 }
