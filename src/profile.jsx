@@ -114,6 +114,40 @@ const App = () => {
           </div>
         </div>
       </main>
+      <footer className="footer">
+        <div className="footer-section">
+          <h2>GSI Immobilier</h2>
+          <p>Votre partenaire de confiance pour l’immobilier moderne.</p>
+        </div>
+        <div className="footer-section">
+          <h3>Navigation</h3>
+          <ul>
+            <li>
+              <a href="#">Accueil</a>
+            </li>
+            <li>
+              <a href="#">Nos biens</a>
+            </li>
+            <li>
+              <a href="#">Fonctionnalités</a>
+            </li>
+            <li>
+              <a href="#">À propos</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Suivez-nous</h3>
+          <div className="socials">
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          &copy; 2025 GSI. Tous droits réservés.
+        </div>
+      </footer>
     </div>
   );
 };
